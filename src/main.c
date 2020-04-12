@@ -4,7 +4,7 @@
 double check();
 
 int main(){
-	printf("%f", check());
+	printf("%lf", check());
 }
 
 double check(){
