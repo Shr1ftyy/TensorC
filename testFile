@@ -1,0 +1,15 @@
+CC = gcc
+SRC = $(wildcard src/*.c) $(wildcard src/utils/*.c)
+obj = $(SRC:.c=.o)
+
+LDFLAGS =
+
+output: $(obj)
+	$(CC) $^ -o $@ $(LDFLAGS)
+
+$(obj): $(SRC)
+	$(CC) -c $^
+
+.PHONY: clean
+clean:
+	rm -f $(obj) main
